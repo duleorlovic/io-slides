@@ -343,12 +343,12 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       }
       html = presenterTitle.join(' - ') + '<br>';
 
-      var gplus = p.gplus ? '<span>g+</span><a href="' + p.gplus +
+      var gplus = p.gplus ? '<span>user</span><a href="' + p.gplus +
           '">' + p.gplus.replace(/https?:\/\//, '') + '</a>' : '';
 
-      var twitter = p.twitter ? '<span>twitter</span>' +
-          '<a href="http://twitter.com/' + p.twitter + '">' +
-          p.twitter + '</a>' : '';
+      // var twitter = p.twitter ? '<span>twitter</span>' +
+      //     '<a href="http://twitter.com/' + p.twitter + '">' +
+      //     p.twitter + '</a>' : '';
 
       var www = p.www ? '<span>www</span><a href="' + p.www +
                         '">' + p.www.replace(/https?:\/\//, '') + '</a>' : '';
@@ -356,7 +356,7 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       var github = p.github ? '<span>github</span><a href="' + p.github +
           '">' + p.github.replace(/https?:\/\//, '') + '</a>' : '';
 
-      var html2 = [gplus, twitter, www, github].join('<br>');
+      var html2 = [gplus, www, github].join('<br>');
 
       if (dataConfigContact) {
         dataConfigContact.innerHTML = html2;
